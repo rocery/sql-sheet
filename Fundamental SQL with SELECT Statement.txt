@@ -1,0 +1,28 @@
+// Membatasi Pengambilan Jumlah Row Data
+SELECT nama_produk FROM ms_produk LIMIT 3;
+
+// Menampilkan kolom menggunakan frefix nama tabel 
+SELECT ms_produk.kode_produk FROM ms_produk;
+
+// Menampilkan kolom menggunakan tambahan AS untuk mengganti hasil query
+SELECT no_urut AS nomor, nama_produk AS nama FROM ms_produk;
+
+// Menampilkan kolom tanpa tambahan AS
+SELECT no_urut nomor, nama_produk nama FROM ms_produk;
+
+// Menggabungkan frefix dan alias
+SELECT ms_produk.harga AS harga_jual FROM ms_produk;
+
+// Frefix pada table 
+SELECT * FROM ms_produk t2;
+SELECT * FROM ms_produk AS t2;
+SELECT t2.nama_produk, t2.harga FROM ms_produk t2;
+
+// Menggunakan WHERE
+SELECT * FROM ms_produk WHERE nama_produk = 'Tas Travel Organizer DQLab';
+
+// OR
+SELECT * FROM ms_produk WHERE nama_produk = 'Gantungan Kunci DQLab' OR 
+nama_produk = 'Tas Travel Organizer DQLab' OR nama_produk = 'Flashdisk DQLab 64 GB';
+SELECT * FROM ms_produk WHERE harga > 50000;
+SELECT * FROM ms_produk WHERE nama_produk = 'Gantungan Kunci DQLab' AND harga < 50000;
